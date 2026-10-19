@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5ef">
+    <title>目前訂單｜大茗本位製茶堂</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="status.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="班級飲料訂單首頁">TEA / CLASS</a>
+      <nav aria-label="主要導覽"><a class="nav-link" href="index.html">我要點餐</a><a class="nav-link is-current" href="status.html">訂單狀況 <span class="nav-arrow" aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main class="status-page">
+      <section class="status-intro">
+        <p class="eyebrow">CLASS ORDER BOARD · 2026</p>
+        <div class="status-title-row"><h1>大家點了什麼？</h1><button id="refresh-orders" class="refresh-button" type="button" aria-label="重新整理訂單" title="重新整理">↻</button></div>
+        <p class="status-subtitle">班級飲料訂單即時整理</p>
+      </section>
+      <section class="status-summary" aria-label="訂單統計">
+        <div><span>訂單筆數</span><strong id="order-count">—</strong></div><div><span>飲料總數</span><strong id="drink-count">—</strong></div><div><span>訂單總額</span><strong id="order-total">—</strong></div>
+      </section>
+      <section class="orders-section" aria-labelledby="orders-title">
+        <div class="list-heading"><h2 id="orders-title">目前訂單</h2><span id="updated-at">等待載入</span></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col">姓名</th><th scope="col">品項 / 規格</th><th scope="col">甜度・冰量・加料</th><th scope="col">數量</th><th scope="col">金額</th><th scope="col">時間</th></tr></thead><tbody id="orders-list"><tr><td class="empty-state" colspan="6">正在讀取訂單…</td></tr></tbody></table></div>
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="site-footer"><span>大茗本位製茶堂 / 班級團購</span><span><a href="index.html">回到點餐 ↗</a></span></footer>
+  </body>
+</html>

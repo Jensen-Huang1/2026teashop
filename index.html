@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5ef">
+    <title>班級飲料訂單｜大茗本位製茶堂</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="班級飲料訂單首頁">TEA / CLASS</a>
+      <nav aria-label="主要導覽">
+        <a class="nav-link is-current" href="index.html">我要點餐</a>
+        <a class="nav-link" href="status.html">訂單狀況 <span class="nav-arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main class="order-page">
+      <section class="menu-row" aria-labelledby="menu-title">
+        <div class="section-heading menu-heading">
+          <div><p class="eyebrow">DA MING · TEA HOUSE</p><h1 id="menu-title">今天，喝點喜歡的。</h1></div>
+          <span class="heading-note">中部菜單 / 2026</span>
+        </div>
+        <figure class="menu-figure">
+          <img src="menu.jpg" alt="大茗本位製茶堂完整飲品菜單，含品項、價格、加料、甜度與冰量" width="2480" height="1754">
+          <figcaption>菜單依店家提供之中部版本呈現，品項與價格以表單選項為準。</figcaption>
+        </figure>
+      </section>
+      <section class="order-row" aria-label="填寫訂單與價格">
+        <form id="order-form" class="order-form">
+          <div class="section-heading form-heading">
+            <div><p class="eyebrow">YOUR ORDER</p><h2>填寫這杯</h2></div>
+            <span class="step-mark">01 / 02</span>
+          </div>
+          <label class="field-label" for="customer-name">你的姓名 <span>方便核對取餐</span></label>
+          <input id="customer-name" name="name" type="text" autocomplete="name" maxlength="30" placeholder="輸入姓名" required>
+          <label class="field-label" for="drink">選一杯 <span>依菜單分類</span></label>
+          <select id="drink" name="drink" required><option value="" selected disabled>選擇飲品或茶點</option></select>
+          <div class="field-pair">
+            <div><label class="field-label" for="size">容量</label><select id="size" name="size" required></select></div>
+            <div><label class="field-label" for="quantity">數量</label><input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required></div>
+          </div>
+          <fieldset class="choice-fieldset"><legend class="field-label">甜度</legend><div class="choice-row" id="sugar-options"></div></fieldset>
+          <fieldset class="choice-fieldset"><legend class="field-label">冰量</legend><div class="choice-row" id="ice-options"></div></fieldset>
+          <fieldset class="choice-fieldset toppings-fieldset"><legend class="field-label">加點配料 <span>可複選</span></legend><div class="topping-options" id="topping-options"></div></fieldset>
+          <label class="field-label" for="note">備註 <span>選填</span></label>
+          <textarea id="note" name="note" rows="2" maxlength="120" placeholder="例如：蕎麥茶請做無咖啡因"></textarea>
+          <button class="submit-button" type="submit">送出訂單 <span aria-hidden="true">↗</span></button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <aside class="price-panel" aria-labelledby="price-title">
+          <div class="price-topline"><span>ORDER SUMMARY</span><span>NT$</span></div>
+          <h2 id="price-title">這次點了</h2>
+          <p id="summary-drink" class="summary-drink">尚未選擇飲品</p>
+          <div class="summary-line"><span id="summary-size">容量待選</span><span id="summary-unit">$ 0</span></div>
+          <div class="summary-line"><span id="summary-toppings">加料 $ 0</span><span id="summary-quantity">× 1</span></div>
+          <div class="price-total"><span>合計</span><strong id="total-price">$ 0</strong></div>
+          <p class="price-caption">送出時會一併記錄此金額。</p>
+          <div class="price-stamp" aria-hidden="true">GOOD<br>TEA<br>DAY</div>
+        </aside>
+      </section>
+    </main>
+    <footer class="site-footer"><span>大茗本位製茶堂 / 班級團購</span><span>MADE FOR OUR CLASS</span></footer>
+  </body>
+</html>
