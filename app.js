@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = '';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDxJs2d4j437jAnMs9FSRzBhT9NkmQv3XjINJSHHff0eRTjcyd5F51fV5rcQrIqmQHUA/exec';
 const products = [
   {category:'嚴選茗品',name:'玉露青茶',prices:{L:35}},{category:'嚴選茗品',name:'桂花青茶',prices:{L:40}},
   {category:'經典純粹',name:'翡翠綠茶',prices:{L:35}},{category:'經典純粹',name:'紅玉紅茶',prices:{L:35}},{category:'經典純粹',name:'御品冬瓜露',prices:{L:35}},{category:'經典純粹',name:'熟成油切蕎麥（含咖啡因／無咖啡因）',prices:{L:35}},{category:'經典純粹',name:'冷萃東方美人',prices:{L:55}},{category:'經典純粹',name:'冷萃半熟金萱',prices:{L:55}},

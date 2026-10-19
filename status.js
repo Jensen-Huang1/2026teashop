@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL='';
+const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyDxJs2d4j437jAnMs9FSRzBhT9NkmQv3XjINJSHHff0eRTjcyd5F51fV5rcQrIqmQHUA/exec';
 const list=document.querySelector('#orders-list');const formatter=new Intl.NumberFormat('zh-TW');
 function setMessage(text,isError=false){const message=document.querySelector('#status-message');message.textContent=text;message.className=`status-message${isError?' is-error':''}`;}
 function formatTime(value){const date=new Date(value);return Number.isNaN(date.getTime())?String(value||''):new Intl.DateTimeFormat('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);}
